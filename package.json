@@ -1,0 +1,9 @@
+{
+  "name": "fictilis",
+  "version": "0.1.0-alpha",
+  "description": " Javascript implementation of active record pattern",
+  "main": "index.js",
+  "license": "MIT",
+  "repository": "git@github.com:sitrakary/fictilis.git",
+  "author": "Sitraka Ratsimba <ratsimbasitraka@gmail.com>"
+}
