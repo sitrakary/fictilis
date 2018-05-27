@@ -1,6 +1,6 @@
 {
   "name": "fictilis",
-  "version": "0.1.0-alpha",
+  "version": "0.1.0-alpha.0",
   "description": " Javascript implementation of active record pattern",
   "main": "index.js",
   "license": "MIT",
