@@ -12,9 +12,13 @@ defaults.
 
 * Rethink database configurations:
 
-    * DEFAULT_FICTILIS_HOST: Rethink database host. Defaults to `localhost`.
-    * DEFAULT_FICTILIS_PORT: Rethink database port. Defaults to `28015`.
-    * DEFAULT_FICTILIS_DBNAME: Rethink database name to be used. Defaults to `test`.
-    * DEFAULT_FICTILIS_USER: user name. Defaults to `admin`.
-    * DEFAULT_FICTILIS_PASSWORD: user password. Defaults to `''`.
-    * DEFAULT_FICTILIS_TIMEOUT: timeout period in seconds for the connection to be opened. Defaults to `''`.
+    * `DEFAULT_FICTILIS_HOST`: Rethink database host. Defaults to `localhost`.
+    * `DEFAULT_FICTILIS_PORT`: Rethink database port. Defaults to `28015`.
+    * `DEFAULT_FICTILIS_DBNAME`: Rethink database name to be used. Defaults to `test`.
+    * `DEFAULT_FICTILIS_USER`: user name. Defaults to `admin`.
+    * `DEFAULT_FICTILIS_PASSWORD`: user password. Defaults to `''`.
+    * `DEFAULT_FICTILIS_TIMEOUT`: timeout period in seconds for the connection to be opened. Defaults to `''`.
+
+These configuration are used when you call Database.connection() without parameters.
+
+> **NOTE:** If you use more than one database just add your new configuration and changes the prefix `DEFAULT` (eg: `EXAMPLE_FICTILIS_HOST`). You can obtain a rethinkdb connection that match your configuration using `Database.connection("example")`.
