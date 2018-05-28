@@ -4,19 +4,20 @@ const { assert } = require('chai')
 const Database = require('../lib/database.js')
 
 describe('Database', function () {
+
   it('Return a connection', async function () {
-    const db = await Database.get()
-    assert.isNotNull(db.connection)
+    await Database.connect()
+    const connection = await Database.get()
+    assert.isNotNull(connection)
   })
 
-  it('Increment number of connection', async function () {
-    const db = await Database.get()
-    assert.isAbove(db.numOfConn, 0)
+  it('Return a connection', async function () {
+    const connection = await Database.connect()
+    assert.isNotNull(connection)
   })
 
-  it('Connect only once', async function () {
-    await Database.get()
-    const db = await Database.get()
-    assert.equal(db.numOfConn, 1)
+  it('Constructor sets options', async function () {
+    let connection = await Database.connect({db: 'testing'})
+    assert.equal(connection.db, 'testing')
   })
 })
